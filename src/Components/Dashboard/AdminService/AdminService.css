@@ -1,0 +1,47 @@
+#admin-service{
+    border-radius: 10px;
+    box-shadow: 0 0 3px gray;
+}
+.service-top{
+    background-color: #F5F6FA;
+    border-radius: 10px;
+}
+.title{
+    margin-top: 10px;
+}
+.bg-light-gray{
+    background-color: #e0e0e0;
+    padding: 10px 0 5px 10px;
+    border-radius: 10px;
+}
+tr,th, td{
+    border: none !important;
+}
+.list-table{
+    background-color: #fff;
+    padding: 20px;
+    border: none;
+}
+.table-header{
+    background-color: #F5F6FA;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    left: -20px;
+    right: auto;
+    display: none;
+    padding: 8px 5px;
+    min-width: 115px;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 8px #b1abab;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }

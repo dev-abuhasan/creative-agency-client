@@ -1,0 +1,11 @@
+label{
+    margin-top: 10px;
+}
+#file-chosen{
+    margin-left: 0.3rem;
+    font-family: sans-serif;
+}
+.file-input{
+    position: absolute;
+    opacity: 0;
+}

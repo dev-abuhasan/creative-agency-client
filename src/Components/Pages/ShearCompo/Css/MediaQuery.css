@@ -1,0 +1,111 @@
+
+@media screen and (max-width: 991px) {
+    .header-sidebar-img{
+        padding: 0 3rem 3rem 3rem!important;
+    }
+    .header-info{
+        padding: 3rem 3rem 1rem 3rem!important;
+    }
+    #header-main{
+        background: url(../../../images/bg-images/header-bg.png) no-repeat;
+        background-attachment: fixed;
+        background-size:100% 900px;
+    }
+}
+@media screen and (max-width: 770px) {
+    .header-info h3{
+        font-size: 30px;
+        word-spacing: 0px;
+    }
+    #header-main{
+        background: url(../../../images/bg-images/header-bg.png) no-repeat;
+        background-attachment: fixed;
+        background-size:100% 600px;
+    }
+}
+@media screen and (max-width: 570px) {
+    .header-info h3{
+        font-size: 24px;
+    }
+    .header-info p{
+        font-size: 17px;
+        text-align: left!important;
+    }
+    .lfxjKM{
+        height: 200px!important;
+    }
+    .footer-title h2{
+        font-size: 24px;
+    }
+    .footer-title p{
+        font-size: 16px;
+    }
+    ::placeholder{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 470px) {
+    .header-info h3{
+        font-size: 20px;
+    }
+    .header-info p{
+        font-size: 14px;
+    }
+    /* Customer section */
+    #customer-info img{
+        width: 70px;
+    }
+    /* Services compo*/
+    .services-title h3{
+        font-size: 24px;
+    }
+    .service-img img{
+        width: 60px;
+    }
+    .service-info h3{
+        font-size: 18px;
+    }
+    .service-info p{
+        font-size: 14px;
+    }
+    #carousel-part h3{
+        font-size: 18px;
+        margin: 0px!important;
+    }
+    /* Carousel Button */
+    .sc-bdnylx{
+        font-size: 16px!important;
+    }
+    #carousel-part{
+        padding: 0px!important;
+        padding-top: 10px!important;
+        padding-bottom: 10px!important;
+    }
+    .lfxjKM{
+        height: 170px!important;
+    }
+    .footer-title h2{
+        font-size: 20px;
+    }
+    .footer-title p{
+        font-size: 15px;
+    }
+    .footer-submit{
+        width: 100%!important;
+        display: block;
+    }
+    ::placeholder{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 400px) {
+    /* Customer section */
+    #customer-info img{
+        width: 60px;
+    }
+    /* Services compo*/
+    .services-title h3{
+        font-size: 20px;
+    }
+    
+}
