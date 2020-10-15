@@ -11,6 +11,7 @@ const HeaderBottom = () => {
                 <div className="header-info p-5">
                     <h3>Let's Grow Your Brand To The Next Level</h3>
                     <p className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolore odio dolorum, voluptate autem </p>
+                    <button className="mt-3 btn btn-dark px-5 d-block">Hire us</button>
                 </div>
             </Col>
             <Col lg={7}>
