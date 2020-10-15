@@ -16,7 +16,7 @@ const Login = () => {
     //redirect to path settings
     const location = useLocation();
     const history = useHistory()
-    let { from } = location.state || { from: { pathname: "/" } };
+    let { from } = location.state || { from: { pathname: "/dashboard" } };
 
     //google sign in 
     const handGoogleSign = () => {
@@ -26,7 +26,7 @@ const Login = () => {
                 history.replace(from);
             })
     }
-    
+
 
     return (
         <Container id="login" className="">
@@ -38,7 +38,7 @@ const Login = () => {
             <div className="row">
                 <div className="signed-in-option col-md-6 m-auto">
                     <div className="title">
-                      
+
                         <h3>Login With</h3>
                     </div>
                     <div className="d-flex flex-column align-items-center">
