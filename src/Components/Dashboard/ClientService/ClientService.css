@@ -23,6 +23,10 @@
     background-color: #C6FFE0;
     color: green;
 }
+.btn-onGoing{
+    background-color: #fff2c6;
+    color: #ffae00;
+}
 .service-info-sec h3{
     margin-top: 15px;
     font-size: 20px;

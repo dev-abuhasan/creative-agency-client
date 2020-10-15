@@ -16,24 +16,47 @@ const AdminService = () => {
             .then(data => setAdminService(data))
     }, [getEmail]);
 
-    const handleUpdate = (id) => {
-        const statusOption = 'Done';
-        fetch(`https://obscure-hollows-57552.herokuapp.com/update-statue/${id}`, {
-            method: 'PATCH',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ statusOption })
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.success === false) {
-                    alert('Status Updated Successfully... Hurray!');
-                }
-                if (data.success === true) {
-                    alert('Status Updated Failed... Sad!');
-                }
+    const handleUpdate = (id, strings) => {
+
+
+        if (strings === 'Done') {
+            const statusOption = 'Done';
+            fetch(`https://obscure-hollows-57552.herokuapp.com/update-statue/${id}`, {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ statusOption })
             })
-            .then(() => window.location.reload())
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success === false) {
+                        alert('Status Updated Successfully... Hurray!');
+                    }
+                    if (data.success === true) {
+                        alert('Status Updated Failed... Sad!');
+                    }
+                })
+                .then(() => window.location.reload())
+        }
+        if (strings === 'onGoing') {
+            const statusOption = 'onGoing';
+            fetch(`https://obscure-hollows-57552.herokuapp.com/update-statue/${id}`, {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ statusOption })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success === false) {
+                        alert('Status Updated Successfully... Hurray!');
+                    }
+                    if (data.success === true) {
+                        alert('Status Updated Failed... Sad!');
+                    }
+                })
+                .then(() => window.location.reload())
+        }
     }
+
     const handleDelete = (id) => {
         fetch(`https://obscure-hollows-57552.herokuapp.com/delete-order/${id}`, { method: 'DELETE' })
             .then(res => res.json())
@@ -69,15 +92,29 @@ const AdminService = () => {
                             <td>{data.projectDetails}</td>
                             <td>
                                 <div className="dropdown">
-                                    <span className={data.statusOption === 'Pending' ? 'text-danger' : 'text-success'}>
-                                        {data.statusOption}
-                                        <span className="ml-2">{downIcon}</span>
-                                    </span>
+                                    {data.statusOption === "Pending" || data.statusOption === "Done" ?
+                                        <span className={data.statusOption === 'Pending' ? 'text-danger' : 'text-success'}>
+                                            {data.statusOption}
+                                            <span className="ml-2">{downIcon}</span>
+                                        </span> : ""
+                                    }
+                                    {data.statusOption === 'onGoing'?
+                                        <span className="text-warning">
+                                            {data.statusOption}
+                                            <span className="ml-2">{downIcon}</span>
+                                        </span>: ''
+                                    }
                                     <div className="dropdown-content">
                                         {data.statusOption !== "Done" ?
                                             <span className="d-block text-success "
-                                                onClick={() => handleUpdate(`${data._id}`)}>
+                                                onClick={() => handleUpdate(`${data._id}`, "Done")}>
                                                 Done
+                                            </span> : ""
+                                        }
+                                        {data.statusOption !== "onGoing" ?
+                                            <span className="d-block text-warning "
+                                                onClick={() => handleUpdate(`${data._id}`, "onGoing")}>
+                                                On Going
                                             </span> : ""
                                         }
                                         <span className="d-block text-danger mb2"
