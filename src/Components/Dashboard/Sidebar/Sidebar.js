@@ -7,6 +7,7 @@ import LoadingSpinner from '../../LoadingSpinner/LoadingSpinner';
 const Sidebar = () => {
     const ExtraData = useContext(ExtraDataContext)
     const { ClickShowData, seeData, setSeeData, getEmail, Admin, setAdmin } = ExtraData;
+    
 
     const shoppingCart = <FontAwesomeIcon icon={faShoppingCart} />
     const taxiIcon = <FontAwesomeIcon icon={faTaxi} />
